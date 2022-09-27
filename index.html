@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Academia</title>
     <link href="css/estilo.css" rel="stylesheet">
+    <link href="css/menu.css" rel="stylesheet">
     <!--Carregando o Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
@@ -15,9 +16,36 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6">
-                <h1 class="text-primary">Cadastro Academia</h1>
+            
+            <div class="col-md-12">
+              
+                <nav id='menu'>
+                    <!--<img class="imagelogo" src="images/image.png" / -->
+                    <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+                    <ul>
+                      <li><a href='http://'>Home</a></li>
+                      <li><a class='dropdown-arrow' href='http://'>Products</a>
+                        <ul class='sub-menus'>
+                          <li><a href='http://'>Products 1</a></li>
+                          <li><a href='http://'>Products 2</a></li>
+                          <li><a href='http://'>Products 3</a></li>
+                          <li><a href='http://'>Products 4</a></li>
+                        </ul>
+                      </li>
+                      <li><a href='http://'>About</a></li>
+                      <li><a class='dropdown-arrow' href='http://'>Services</a>
+                        <ul class='sub-menus'>
+                          <li><a href='http://'>Services 1</a></li>
+                          <li><a href='http://'>Services 2</a></li>
+                          <li><a href='http://'>Services 3</a></li>
+                        </ul>
+                      </li>
+                      <li><a href='http://'>Contact Us</a></li>
+                    </ul>
+                  </nav>
+                  <h1 class="text-primary">Cadastro Academia</h1>
             </div>
+
         </div>
 
         <div class="row">
@@ -51,9 +79,9 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label" for="sexo">Sexo</label>
                             <div class="col-md-4">
-                                <input id="masculino" name="masculino" type="radio" value="masculino">
+                                <input id="masculino" name="sexo" type="radio" checked value="masculino">
                                 <label for="masculino">Masculino</label>
-                                <input id="feminino" name="feminino" type="radio" value="feminino">
+                                <input id="feminino" name="sexo" type="radio" value="feminino">
                                 <label for="feminino">Feminino</label>
                             </div>
                         </div>
@@ -116,8 +144,8 @@
             <th>Masculino</th>
             <th>80</th>
             <th>1.80</th>
-            <th> <button id="Apagar" name="Apagar" class="btn btn-success">🚫Apagar</button>
-                <button id="Editar" name="Editar" class="btn btn-success">🚫Editar</th>
+            <th> <button id="Apagar" name="Apagar" class="btn btn-sm btn-danger">🚫Apagar</button> <br>
+                <button id="Editar" name="Editar" class="btn btn-sm btn-success">📝Editar</th>
         </tr>
             <th>2</th>
             <th>Yasmin Christine</th>
